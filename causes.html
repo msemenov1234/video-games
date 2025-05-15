@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Профілактика вигорання - Вигорання в геймдеві</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .tip {
+        background: white;
+        border-left: 4px solid #6e48aa;
+        padding: 1rem;
+        margin: 1rem 0;
+        display: flex;
+        align-items: flex-start;
+      }
+
+      .tip-icon {
+        font-size: 2rem;
+        margin-right: 1rem;
+        color: #6e48aa;
+      }
+
+      .tip-content {
+        flex: 1;
+      }
+
+      .checklist {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .checklist li {
+        padding: 0.5rem 0;
+        position: relative;
+        padding-left: 2rem;
+      }
+
+      .checklist li:before {
+        content: "✓";
+        color: #6e48aa;
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+      }
+
+      .progress-container {
+        width: 100%;
+        background-color: #f0f0f0;
+        border-radius: 4px;
+        margin: 1rem 0;
+      }
+
+      .progress-bar {
+        height: 20px;
+        background-color: #6e48aa;
+        border-radius: 4px;
+        width: 0%;
+        transition: width 1s ease;
+      }
+
+      .interactive-box {
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .interactive-box h3 {
+        margin-top: 0;
+        color: #6e48aa;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Профілактика вигорання в розробці ігор</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="symptoms.html">Симптоми</a></li>
+        <li><a href="causes.html">Причини</a></li>
+        <li><a href="prevention.html">Профілактика</a></li>
+        <li><a href="resources.html">Ресурси</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section>
+        <h2>Як запобігти вигоранню в геймдеві?</h2>
+        <p>
+          Запобігання вигоранню потребує як індивідуальних, так і організаційних
+          заходів. Ось основні стратегії:
+        </p>
+
+        <div class="tip">
+          <div class="tip-icon">💡</div>
+          <div class="tip-content">
+            <h3>Встановіть чіткі межі</h3>
+            <p>
+              Навчіться говорити "ні" надмірним робочим вимогам. Встановіть
+              реальні дедлайни і дотримуйтесь нормального робочого графіка.
+            </p>
+          </div>
+        </div>
+
+        <div class="tip">
+          <div class="tip-icon">⏰</div>
+          <div class="tip-content">
+            <h3>Робочий графік</h3>
+            <p>
+              Створіть реалістичний графік роботи з обов'язковими перервами.
+              Використовуйте техніку Pomodoro (25 хв роботи / 5 хв відпочинку).
+            </p>
+          </div>
+        </div>
+
+        <div class="interactive-box">
+          <h3>Ваш щоденний план профілактики</h3>
+          <p>
+            Відмітьте, що ви вже зробили сьогодні для запобігання вигоранню:
+          </p>
+
+          <ul class="checklist">
+            <li>
+              <input type="checkbox" id="item1" class="prevention-checkbox" />
+              <label for="item1">Зробив перерву після 1 години роботи</label>
+            </li>
+            <li>
+              <input type="checkbox" id="item2" class="prevention-checkbox" />
+              <label for="item2">Випив достатньо води</label>
+            </li>
+            <li>
+              <input type="checkbox" id="item3" class="prevention-checkbox" />
+              <label for="item3">Вийшов на прогулянку</label>
+            </li>
+            <li>
+              <input type="checkbox" id="item4" class="prevention-checkbox" />
+              <label for="item4">Не працював понад 8 годин</label>
+            </li>
+            <li>
+              <input type="checkbox" id="item5" class="prevention-checkbox" />
+              <label for="item5">Займався хобі</label>
+            </li>
+          </ul>
+
+          <div class="progress-container">
+            <div class="progress-bar" id="prevention-progress"></div>
+          </div>
+          <p id="progress-text">0% завершено</p>
+        </div>
+
+        <h3>Техніки релаксації</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin: 1rem 0">
+          <div
+            style="
+              flex: 1;
+              min-width: 200px;
+              background: white;
+              padding: 1rem;
+              border-radius: 8px;
+              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            "
+          >
+            <h4>Глибоке дихання</h4>
+            <p>4-7-8 техніка: вдих на 4, затримка на 7, видих на 8 секунд.</p>
+            <button
+              class="start-breathing"
+              style="
+                padding: 0.5rem 1rem;
+                background-color: #6e48aa;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+              "
+            >
+              Старт
+            </button>
+            <div
+              id="breathing-timer"
+              style="font-size: 2rem; text-align: center; margin-top: 1rem"
+            ></div>
+          </div>
+
+          <div
+            style="
+              flex: 1;
+              min-width: 200px;
+              background: white;
+              padding: 1rem;
+              border-radius: 8px;
+              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            "
+          >
+            <h4>5-4-3-2-1</h4>
+            <p>
+              Назвіть 5 речей, які бачите, 4 - які чуєте, 3 - які відчуваєте, 2
+              - які пахнуть, 1 - які можете скуштувати.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Відео-медитація для розробників</h2>
+        <div
+          style="
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin: 1rem 0;
+          "
+        >
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/inpok4MKVLM"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            style="
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+            "
+          ></iframe>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 Профілактика вигорання в геймдеві. Всі права захищені.</p>
+    </footer>
+
+    <script>
+      // Інтерактивний чекліст
+      const checkboxes = document.querySelectorAll(".prevention-checkbox");
+      const progressBar = document.getElementById("prevention-progress");
+      const progressText = document.getElementById("progress-text");
+
+      checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener("change", updateProgress);
+      });
+
+      function updateProgress() {
+        const checked = document.querySelectorAll(
+          ".prevention-checkbox:checked"
+        ).length;
+        const total = checkboxes.length;
+        const percentage = (checked / total) * 100;
+
+        progressBar.style.width = percentage + "%";
+        progressText.textContent = Math.round(percentage) + "% завершено";
+
+        if (percentage === 100) {
+          progressText.innerHTML +=
+            "<br>Відмінно! Ви добре піклуєтесь про себе!";
+        }
+      }
+
+      // Таймер дихання
+      document
+        .querySelector(".start-breathing")
+        .addEventListener("click", function () {
+          const timer = document.getElementById("breathing-timer");
+          let seconds = 0;
+          let phase = "inhale"; // inhale, hold, exhale
+
+          timer.textContent = "Вдих - 4 сек";
+
+          const interval = setInterval(() => {
+            seconds++;
+
+            if (phase === "inhale" && seconds >= 4) {
+              phase = "hold";
+              seconds = 0;
+              timer.textContent = "Затримка - 7 сек";
+            } else if (phase === "hold" && seconds >= 7) {
+              phase = "exhale";
+              seconds = 0;
+              timer.textContent = "Видих - 8 сек";
+            } else if (phase === "exhale" && seconds >= 8) {
+              phase = "inhale";
+              seconds = 0;
+              timer.textContent = "Вдих - 4 сек";
+            }
+
+            if (seconds >= 30) {
+              // Зупинити після 30 сек
+              clearInterval(interval);
+              timer.textContent = "Готово!";
+            }
+          }, 1000);
+        });
+    </script>
+  </body>
+</html>

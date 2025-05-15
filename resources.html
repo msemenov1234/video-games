@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ресурси - Вигорання в геймдеві</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .resource-card {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .resource-card:hover {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        transform: translateY(-3px);
+      }
+
+      .resource-card h3 {
+        color: #6e48aa;
+        margin-top: 0;
+      }
+
+      .resource-card .meta {
+        color: #666;
+        font-size: 0.9rem;
+        margin: 0.5rem 0;
+      }
+
+      .resource-card .link {
+        margin-top: auto;
+      }
+
+      .resource-card a {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        background-color: #6e48aa;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+      }
+
+      .resource-card a:hover {
+        background-color: #9d50bb;
+      }
+
+      .search-container {
+        margin: 1rem 0;
+        display: flex;
+      }
+
+      .search-container input {
+        flex: 1;
+        padding: 0.5rem;
+        border: 1px solid #ddd;
+        border-radius: 4px 0 0 4px;
+        font-size: 1rem;
+      }
+
+      .search-container button {
+        padding: 0.5rem 1rem;
+        background-color: #6e48aa;
+        color: white;
+        border: none;
+        border-radius: 0 4px 4px 0;
+        cursor: pointer;
+      }
+
+      .filter-buttons {
+        display: flex;
+        gap: 0.5rem;
+        margin: 1rem 0;
+        flex-wrap: wrap;
+      }
+
+      .filter-buttons button {
+        padding: 0.5rem 1rem;
+        background-color: #f0f0f0;
+        border: 1px solid #ddd;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+
+      .filter-buttons button.active {
+        background-color: #6e48aa;
+        color: white;
+        border-color: #6e48aa;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Корисні ресурси</h1>
+      <p>Матеріали для подолання та профілактики вигорання в геймдеві</p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="symptoms.html">Симптоми</a></li>
+        <li><a href="causes.html">Причини</a></li>
+        <li><a href="prevention.html">Профілактика</a></li>
+        <li><a href="resources.html">Ресурси</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section>
+        <h2>Знайти ресурси</h2>
+
+        <div class="search-container">
+          <input
+            type="text"
+            id="resource-search"
+            placeholder="Пошук ресурсів..."
+          />
+          <button id="search-button">Пошук</button>
+        </div>
+
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">Всі</button>
+          <button class="filter-btn" data-filter="book">Книги</button>
+          <button class="filter-btn" data-filter="article">Статті</button>
+          <button class="filter-btn" data-filter="video">Відео</button>
+          <button class="filter-btn" data-filter="community">Спільноти</button>
+        </div>
+
+        <div id="resources-container">
+          <div class="resource-card" data-category="article">
+            <h3>IGDA Developer Satisfaction Survey</h3>
+            <div class="meta">Стаття · IGDA · 2022</div>
+            <p>
+              Щорічне дослідження задоволеності розробників ігор, яке включає
+              дані про вигорання в індустрії.
+            </p>
+            <div class="link">
+              <a href="https://igda.org" target="_blank">Перейти</a>
+            </div>
+          </div>
+
+          <div class="resource-card" data-category="book">
+            <h3>"Кранч-тайм" by Jason Schreier</h3>
+            <div class="meta">Книга · 2020</div>
+            <p>
+              Книга, яка розкриває проблеми кранч-культури в індустрії відеоігор
+              на прикладах реальних студій.
+            </p>
+            <div class="link">
+              <a href="https://example.com" target="_blank">Детальніше</a>
+            </div>
+          </div>
+
+          <div class="resource-card" data-category="video">
+            <h3>"Вигорання в геймдеві" - ГТС Україна</h3>
+            <div class="meta">Відео · YouTube · 2021</div>
+            <p>
+              Лекція про вигорання в індустрії ігор від Game Developers
+              Association Ukraine.
+            </p>
+            <div class="link">
+              <a href="https://youtube.com" target="_blank">Дивитись</a>
+            </div>
+          </div>
+
+          <div class="resource-card" data-category="community">
+            <h3>Game Dev Psychology</h3>
+            <div class="meta">Спільнота · Discord</div>
+            <p>Спільнота психологічної підтримки для розробників ігор.</p>
+            <div class="link">
+              <a href="https://discord.com" target="_blank">Приєднатись</a>
+            </div>
+          </div>
+
+          <div class="resource-card" data-category="article">
+            <h3>Як вижити в геймдеві</h3>
+            <div class="meta">Стаття · Gamasutra · 2021</div>
+            <p>
+              Практичні поради від досвідчених розробників, як уникнути
+              вигорання.
+            </p>
+            <div class="link">
+              <a href="https://gamasutra.com" target="_blank">Читати</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Контакти психологічної підтримки</h2>
+        <table class="statistics-table">
+          <tr>
+            <th>Організація</th>
+            <th>Послуги</th>
+            <th>Контакти</th>
+          </tr>
+          <tr>
+            <td>Лінія підтримки розробників</td>
+            <td>Безкоштовні консультації психолога</td>
+            <td>0 800 123 456</td>
+          </tr>
+          <tr>
+            <td>IGDA Mental Health</td>
+            <td>Ресурси та підтримка</td>
+            <td><a href="https://igda.org">igda.org</a></td>
+          </tr>
+          <tr>
+            <td>Game Dev Help Ukraine</td>
+            <td>Підтримка українських розробників</td>
+            <td><a href="mailto:help@gamedev.ua">help@gamedev.ua</a></td>
+          </tr>
+        </table>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 Профілактика вигорання в геймдеві. Всі права захищені.</p>
+    </footer>
+
+    <script>
+      // Фільтрація ресурсів
+      const filterButtons = document.querySelectorAll(".filter-btn");
+      const resources = document.querySelectorAll(".resource-card");
+
+      filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          // Видалити активний клас з усіх кнопок
+          filterButtons.forEach((btn) => btn.classList.remove("active"));
+          // Додати активний клас до поточної кнопки
+          button.classList.add("active");
+
+          const filter = button.dataset.filter;
+
+          resources.forEach((resource) => {
+            if (filter === "all" || resource.dataset.category === filter) {
+              resource.style.display = "block";
+            } else {
+              resource.style.display = "none";
+            }
+          });
+        });
+      });
+
+      // Пошук ресурсів
+      document
+        .getElementById("search-button")
+        .addEventListener("click", searchResources);
+      document
+        .getElementById("resource-search")
+        .addEventListener("keyup", function (e) {
+          if (e.key === "Enter") {
+            searchResources();
+          }
+        });
+
+      function searchResources() {
+        const searchTerm = document
+          .getElementById("resource-search")
+          .value.toLowerCase();
+
+        resources.forEach((resource) => {
+          const title = resource.querySelector("h3").textContent.toLowerCase();
+          const description = resource
+            .querySelector("p")
+            .textContent.toLowerCase();
+
+          if (title.includes(searchTerm) || description.includes(searchTerm)) {
+            resource.style.display = "block";
+          } else {
+            resource.style.display = "none";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
