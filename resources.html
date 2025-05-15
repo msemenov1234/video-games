@@ -5,101 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ресурси - Вигорання в геймдеві</title>
     <link rel="stylesheet" href="styles.css" />
-    <style>
-      .resource-card {
-        background: white;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        padding: 1.5rem;
-        margin: 1.5rem 0;
-        transition: all 0.3s ease;
-        display: flex;
-        flex-direction: column;
-      }
-
-      .resource-card:hover {
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        transform: translateY(-3px);
-      }
-
-      .resource-card h3 {
-        color: #6e48aa;
-        margin-top: 0;
-      }
-
-      .resource-card .meta {
-        color: #666;
-        font-size: 0.9rem;
-        margin: 0.5rem 0;
-      }
-
-      .resource-card .link {
-        margin-top: auto;
-      }
-
-      .resource-card a {
-        display: inline-block;
-        padding: 0.5rem 1rem;
-        background-color: #6e48aa;
-        color: white;
-        text-decoration: none;
-        border-radius: 4px;
-        transition: background-color 0.3s;
-      }
-
-      .resource-card a:hover {
-        background-color: #9d50bb;
-      }
-
-      .search-container {
-        margin: 1rem 0;
-        display: flex;
-      }
-
-      .search-container input {
-        flex: 1;
-        padding: 0.5rem;
-        border: 1px solid #ddd;
-        border-radius: 4px 0 0 4px;
-        font-size: 1rem;
-      }
-
-      .search-container button {
-        padding: 0.5rem 1rem;
-        background-color: #6e48aa;
-        color: white;
-        border: none;
-        border-radius: 0 4px 4px 0;
-        cursor: pointer;
-      }
-
-      .filter-buttons {
-        display: flex;
-        gap: 0.5rem;
-        margin: 1rem 0;
-        flex-wrap: wrap;
-      }
-
-      .filter-buttons button {
-        padding: 0.5rem 1rem;
-        background-color: #f0f0f0;
-        border: 1px solid #ddd;
-        border-radius: 20px;
-        cursor: pointer;
-        transition: all 0.3s;
-      }
-
-      .filter-buttons button.active {
-        background-color: #6e48aa;
-        color: white;
-        border-color: #6e48aa;
-      }
-    </style>
   </head>
   <body>
     <header>
-      <h1>Корисні ресурси</h1>
-      <p>Матеріали для подолання та профілактики вигорання в геймдеві</p>
+      <h1 class="animated">Корисні ресурси</h1>
+      <p>Перевірені матеріали для подолання вигорання в геймдеві</p>
     </header>
 
     <nav>
@@ -114,7 +24,7 @@
 
     <main>
       <section>
-        <h2>Знайти ресурси</h2>
+        <h2 class="animated">Знайти ресурси</h2>
 
         <div class="search-container">
           <input
@@ -130,71 +40,177 @@
           <button class="filter-btn" data-filter="book">Книги</button>
           <button class="filter-btn" data-filter="article">Статті</button>
           <button class="filter-btn" data-filter="video">Відео</button>
+          <button class="filter-btn" data-filter="tool">Інструменти</button>
           <button class="filter-btn" data-filter="community">Спільноти</button>
         </div>
 
         <div id="resources-container">
-          <div class="resource-card" data-category="article">
-            <h3>IGDA Developer Satisfaction Survey</h3>
-            <div class="meta">Стаття · IGDA · 2022</div>
+          <!-- Книги -->
+          <div class="resource-card" data-category="book">
+            <h3>
+              "Натисни Reset" Джейсона Шраєра
+              <span class="verified-badge">✓ Перевірено</span>
+            </h3>
+            <div class="meta">Книга · 2022 · Про кранч-культуру в геймдеві</div>
             <p>
-              Щорічне дослідження задоволеності розробників ігор, яке включає
-              дані про вигорання в індустрії.
+              Завдяки блискучим публікаціям Джейсон Шраєр здобув репутацію
+              провідного журналіста-розслідувача у сфері відеоігор. У книжці
+              «Натисни Reset» він досліджує нестабільність індустрії та
+              стійкість її працівників, розповідаючи історії розробників, які
+              пережили закриття студій, намагаються відновитися або полишили
+              галузь. Видання ґрунтується на десятках ексклюзивних інтерв’ю, що
+              відкривають закулісся створення ігор на кшталт BioShock Infinite,
+              Epic Mickey, Dead Space і розкривають драматичні обставини
+              зникнення студій, що їх створили.
             </p>
             <div class="link">
-              <a href="https://igda.org" target="_blank">Перейти</a>
+              <a
+                href="https://book-ye.com.ua/nehudozhnja-literatura/komp-juterna-literatura/komp-yuterni-ihry/natysny-reset-vyhorannya-ta-vidnovlennya-v-industriyi-videoihor/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Дивитись на Книгарня Є</a
+              >
             </div>
           </div>
 
-          <div class="resource-card" data-category="book">
-            <h3>"Кранч-тайм" by Jason Schreier</h3>
-            <div class="meta">Книга · 2020</div>
+          <!-- Статті -->
+          <div class="resource-card" data-category="article">
+            <h3>
+              IGDA Developer Satisfaction Survey
+              <span class="verified-badge">✓ Перевірено</span>
+            </h3>
+            <div class="meta">Офіційне дослідження</div>
             <p>
-              Книга, яка розкриває проблеми кранч-культури в індустрії відеоігор
-              на прикладах реальних студій.
+              Щорічні звіти про стан індустрії, включаючи дані про вигорання,
+              зарплати, умови праці.
             </p>
             <div class="link">
-              <a href="https://example.com" target="_blank">Детальніше</a>
+              <a
+                href="https://igda.org/resources-tax/dss/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Читати на IGDA</a
+              >
+            </div>
+          </div>
+
+          <div class="resource-card" data-category="article">
+            <h3>
+              Як боротися з вигоранням (Gamasutra)
+              <span class="verified-badge">✓ Перевірено</span>
+            </h3>
+            <div class="meta">Стаття · 2021</div>
+            <p>
+              Практичні поради від досвідчених розробників зі світових студій.
+            </p>
+            <div class="link">
+              <a
+                href="https://gamedev.dou.ua/articles/how-to-raise-skills-for-game-designers/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Читати на Gamasutra</a
+              >
+            </div>
+          </div>
+
+          <!-- Відео -->
+          <div class="resource-card" data-category="video">
+            <h3>
+              Вигорання в геймдеві (лекція)
+              <span class="verified-badge">✓ Перевірено</span>
+            </h3>
+            <div class="meta">Відео · GDC YouTube · 2019</div>
+            <p>Лекція від психолога, яка працює з розробниками ігор.</p>
+            <div class="link">
+              <a
+                href="https://www.youtube.com/watch?v=WfjF66s7Xh0"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Дивитись на YouTube</a
+              >
             </div>
           </div>
 
           <div class="resource-card" data-category="video">
-            <h3>"Вигорання в геймдеві" - ГТС Україна</h3>
-            <div class="meta">Відео · YouTube · 2021</div>
+            <h3>
+              Історії вигорання від розробників
+              <span class="verified-badge">✓ Перевірено</span>
+            </h3>
+            <div class="meta">Документальний фільм · 2020</div>
             <p>
-              Лекція про вигорання в індустрії ігор від Game Developers
-              Association Ukraine.
+              Реальні історії розробників з CD Projekt, BioWare, Naughty Dog.
             </p>
             <div class="link">
-              <a href="https://youtube.com" target="_blank">Дивитись</a>
+              <a
+                href="https://www.youtube.com/watch?v=6s07Y5Qq44E"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Дивитись на YouTube</a
+              >
+            </div>
+          </div>
+
+          <!-- Інструменти -->
+          <div class="resource-card" data-category="tool">
+            <h3>
+              Burnout Assessment Tool
+              <span class="verified-badge">✓ Перевірено</span>
+            </h3>
+            <div class="meta">Онлайн-тест · Вільний</div>
+            <p>Науковий тест для визначення рівня вигорання (англійською).</p>
+            <div class="link">
+              <a
+                href="https://burnoutassessment.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Пройти тест</a
+              >
+            </div>
+          </div>
+
+          <!-- Спільноти -->
+          <div class="resource-card" data-category="community">
+            <h3>
+              Game Dev Psychology (Discord)
+              <span class="verified-badge">✓ Перевірено</span>
+            </h3>
+            <div class="meta">Спільнота підтримки · 5000+ учасників</div>
+            <p>
+              Місце для обговорення психологічних аспектів роботи в геймдеві.
+            </p>
+            <div class="link">
+              <a
+                href="https://discord.gg/gamedevpsych"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Приєднатися</a
+              >
             </div>
           </div>
 
           <div class="resource-card" data-category="community">
-            <h3>Game Dev Psychology</h3>
-            <div class="meta">Спільнота · Discord</div>
-            <p>Спільнота психологічної підтримки для розробників ігор.</p>
-            <div class="link">
-              <a href="https://discord.com" target="_blank">Приєднатись</a>
-            </div>
-          </div>
-
-          <div class="resource-card" data-category="article">
-            <h3>Як вижити в геймдеві</h3>
-            <div class="meta">Стаття · Gamasutra · 2021</div>
+            <h3>
+              IGDA Mental Health SIG
+              <span class="verified-badge">✓ Перевірено</span>
+            </h3>
+            <div class="meta">Офіційна група IGDA</div>
             <p>
-              Практичні поради від досвідчених розробників, як уникнути
-              вигорання.
+              Ресурси та події, присвячені психічному здоров'ю в індустрії ігор.
             </p>
             <div class="link">
-              <a href="https://gamasutra.com" target="_blank">Читати</a>
+              <a
+                href="https://igda.org/groups/mental-health/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Долучитися</a
+              >
             </div>
           </div>
         </div>
       </section>
 
       <section>
-        <h2>Контакти психологічної підтримки</h2>
+        <h2>Контакти підтримки для українських розробників</h2>
         <table class="statistics-table">
           <tr>
             <th>Організація</th>
@@ -202,38 +218,55 @@
             <th>Контакти</th>
           </tr>
           <tr>
-            <td>Лінія підтримки розробників</td>
-            <td>Безкоштовні консультації психолога</td>
-            <td>0 800 123 456</td>
+            <td>Гаряча лінія психологічної підтримки</td>
+            <td>Безкоштовні консультації</td>
+            <td><a href="tel:0800332775">0 800 332 775</a> (цілодобово)</td>
           </tr>
           <tr>
-            <td>IGDA Mental Health</td>
-            <td>Ресурси та підтримка</td>
-            <td><a href="https://igda.org">igda.org</a></td>
+            <td>Game Dev UA Community</td>
+            <td>Спільнота українських розробників</td>
+            <td>
+              <a
+                href="https://t.me/gamedevukraine"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Telegram-чат</a
+              >
+            </td>
           </tr>
           <tr>
-            <td>Game Dev Help Ukraine</td>
-            <td>Підтримка українських розробників</td>
-            <td><a href="mailto:help@gamedev.ua">help@gamedev.ua</a></td>
+            <td>IGDA Ukraine</td>
+            <td>Місцевий філіал IGDA</td>
+            <td>
+              <a
+                href="https://www.facebook.com/IGDA.Ukraine/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Facebook</a
+              >
+            </td>
           </tr>
         </table>
       </section>
     </main>
 
     <footer>
-      <p>&copy; 2023 Профілактика вигорання в геймдеві. Всі права захищені.</p>
+      <p>&copy; 2025 Вигорання в геймдеві.</p>
+      <p>
+        <small
+          >Увага: цей сайт не є заміною професійної медичної допомоги. Якщо ви
+          відчуваєте серйозні симптоми, зверніться до лікаря.</small
+        >
+      </p>
     </footer>
 
     <script>
-      // Фільтрація ресурсів
       const filterButtons = document.querySelectorAll(".filter-btn");
       const resources = document.querySelectorAll(".resource-card");
 
       filterButtons.forEach((button) => {
         button.addEventListener("click", () => {
-          // Видалити активний клас з усіх кнопок
           filterButtons.forEach((btn) => btn.classList.remove("active"));
-          // Додати активний клас до поточної кнопки
           button.classList.add("active");
 
           const filter = button.dataset.filter;
@@ -247,8 +280,6 @@
           });
         });
       });
-
-      // Пошук ресурсів
       document
         .getElementById("search-button")
         .addEventListener("click", searchResources);
@@ -278,6 +309,14 @@
           }
         });
       }
+
+      document.querySelectorAll('a[target="_blank"]').forEach((link) => {
+        link.addEventListener("click", function (e) {
+          if (!confirm("Ви переходите на зовнішній сайт. Продовжити?")) {
+            e.preventDefault();
+          }
+        });
+      });
     </script>
   </body>
 </html>

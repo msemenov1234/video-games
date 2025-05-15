@@ -4,180 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Вигорання в геймдеві - Головна</title>
-    <style>
-      body {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        line-height: 1.6;
-        margin: 0;
-        padding: 0;
-        background-color: #f5f5f5;
-        color: #333;
-      }
-
-      header {
-        background: linear-gradient(135deg, #6e48aa 0%, #9d50bb 100%);
-        color: white;
-        padding: 1rem 0;
-        text-align: center;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      }
-
-      nav {
-        background-color: #333;
-        padding: 0.5rem;
-      }
-
-      nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-      }
-
-      nav li {
-        margin: 0 1rem;
-      }
-
-      nav a {
-        color: white;
-        text-decoration: none;
-        padding: 0.5rem 1rem;
-        border-radius: 4px;
-        transition: background-color 0.3s;
-      }
-
-      nav a:hover {
-        background-color: #555;
-      }
-
-      main {
-        max-width: 1200px;
-        margin: 2rem auto;
-        padding: 0 1rem;
-      }
-
-      footer {
-        background-color: #333;
-        color: white;
-        text-align: center;
-        padding: 1rem 0;
-        margin-top: 2rem;
-      }
-
-      /* Анімації */
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-
-      .animated {
-        animation: fadeIn 1s ease-in;
-      }
-
-      .pulse {
-        animation: pulse 2s infinite;
-      }
-
-      @keyframes pulse {
-        0% {
-          transform: scale(1);
-        }
-        50% {
-          transform: scale(1.05);
-        }
-        100% {
-          transform: scale(1);
-        }
-      }
-
-      /* Специфічні стилі */
-      .warning-box {
-        background-color: #fff3cd;
-        border-left: 5px solid #ffc107;
-        padding: 1rem;
-        margin: 1rem 0;
-      }
-
-      .statistics-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 1rem 0;
-      }
-
-      .statistics-table th,
-      .statistics-table td {
-        border: 1px solid #ddd;
-        padding: 8px;
-        text-align: left;
-      }
-
-      .statistics-table tr:nth-child(even) {
-        background-color: #f2f2f2;
-      }
-
-      .statistics-table th {
-        background-color: #6e48aa;
-        color: white;
-      }
-
-      .game-card {
-        background: white;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        padding: 1rem;
-        margin: 1rem 0;
-        transition: transform 0.3s;
-      }
-
-      .game-card:hover {
-        transform: translateY(-5px);
-      }
-
-      .image-gallery {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-        margin: 1rem 0;
-      }
-
-      .image-gallery img {
-        width: 200px;
-        height: 150px;
-        object-fit: cover;
-        border-radius: 4px;
-        transition: transform 0.3s;
-      }
-
-      .image-gallery img:hover {
-        transform: scale(1.1);
-      }
-
-      /* Кнопка наверх */
-      #back-to-top {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background-color: #6e48aa;
-        color: white;
-        border: none;
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        font-size: 1.5rem;
-        cursor: pointer;
-        display: none;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-      }
-
-      #back-to-top:hover {
-        background-color: #9d50bb;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <!-- Головна сторінка -->
@@ -288,7 +115,7 @@
       </section>
 
       <section>
-        <h2>Відео про вигорання в геймдеві</h2>
+        <h2>Відео про емоційне вигорання</h2>
         <div
           style="
             position: relative;
@@ -301,7 +128,9 @@
           <iframe
             width="560"
             height="315"
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            src="https://www.youtube.com/embed/Ko85s8fROss?si=kSby9MSlXosV6Uvq"
+            title="YouTube video player"
+            referrerpolicy="strict-origin-when-cross-origin"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
@@ -315,22 +144,22 @@
           ></iframe>
         </div>
         <p>
-          Це відео розповідає про реальні історії розробників, які стикалися з
-          вигоранням, та їхні шляхи подолання цієї проблеми.
+          В цьому відео розбирають що ж таке емоційне вигорання та як воно
+          виникає і як з ним зправлятись
         </p>
       </section>
 
       <section>
-        <h2>Аудіо: Медитація для розробників</h2>
+        <h2>Аудіо: Музика для розробників якщо хочеться відволіктися</h2>
         <audio controls style="width: 100%; margin: 1rem 0">
           <source
-            src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+            src="calm-mind-chill-lofi-beat-background-music-259700.mp3"
             type="audio/mpeg"
           />
           Ваш браузер не підтримує аудіо елемент.
         </audio>
         <p>
-          Коротка медитація, яка допоможе зняти стрес після тривалого кодингу.
+          Коротка мелодія, яка допоможе зняти стрес після тривалого кодингу.
         </p>
       </section>
     </main>
@@ -344,8 +173,10 @@
         >
       </p>
       <div>
-        <a href="https://facebook.com" style="color: white; margin: 0 0.5rem"
-          >Facebook</a
+        <a
+          href="https://www.instagram.com/didenko_o_v/?locale=ua"
+          style="color: white; margin: 0 0.5rem"
+          >Instagram</a
         >
         <a href="https://twitter.com" style="color: white; margin: 0 0.5rem"
           >Twitter</a
@@ -382,7 +213,6 @@
           document.documentElement.scrollTop = 0;
         });
 
-      // Анімація при завантаженні
       document.addEventListener("DOMContentLoaded", function () {
         const elements = document.querySelectorAll(".game-card, h2, h3");
         elements.forEach((el, index) => {
@@ -392,7 +222,6 @@
         });
       });
 
-      // Інтерактивна карта зображень
       document.querySelectorAll(".image-gallery img").forEach((img) => {
         img.addEventListener("click", function () {
           alert("Ви обрали зображення: " + this.alt);

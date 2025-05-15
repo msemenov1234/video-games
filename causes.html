@@ -3,79 +3,70 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Профілактика вигорання - Вигорання в геймдеві</title>
+    <title>Причини вигорання - Вигорання в геймдеві</title>
     <link rel="stylesheet" href="styles.css" />
     <style>
-      .tip {
+      .cause-card {
         background: white;
-        border-left: 4px solid #6e48aa;
-        padding: 1rem;
-        margin: 1rem 0;
-        display: flex;
-        align-items: flex-start;
-      }
-
-      .tip-icon {
-        font-size: 2rem;
-        margin-right: 1rem;
-        color: #6e48aa;
-      }
-
-      .tip-content {
-        flex: 1;
-      }
-
-      .checklist {
-        list-style-type: none;
-        padding: 0;
-      }
-
-      .checklist li {
-        padding: 0.5rem 0;
-        position: relative;
-        padding-left: 2rem;
-      }
-
-      .checklist li:before {
-        content: "✓";
-        color: #6e48aa;
-        position: absolute;
-        left: 0;
-        font-weight: bold;
-      }
-
-      .progress-container {
-        width: 100%;
-        background-color: #f0f0f0;
-        border-radius: 4px;
-        margin: 1rem 0;
-      }
-
-      .progress-bar {
-        height: 20px;
-        background-color: #6e48aa;
-        border-radius: 4px;
-        width: 0%;
-        transition: width 1s ease;
-      }
-
-      .interactive-box {
-        background-color: #f8f9fa;
         border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         padding: 1.5rem;
         margin: 1.5rem 0;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
       }
 
-      .interactive-box h3 {
-        margin-top: 0;
+      .cause-card:hover {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transform: translateY(-3px);
+      }
+
+      .cause-card h3 {
         color: #6e48aa;
+        border-bottom: 2px solid #f0f0f0;
+        padding-bottom: 0.5rem;
+      }
+
+      .slider {
+        position: relative;
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+        margin: 2rem 0;
+        border-radius: 8px;
+      }
+
+      .slide {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 1s ease;
+      }
+
+      .slide.active {
+        opacity: 1;
+      }
+
+      .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .slide-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 1rem;
       }
     </style>
   </head>
   <body>
     <header>
-      <h1>Профілактика вигорання в розробці ігор</h1>
+      <h1>Причини вигорання в розробці ігор</h1>
     </header>
 
     <nav>
@@ -90,215 +81,173 @@
 
     <main>
       <section>
-        <h2>Як запобігти вигоранню в геймдеві?</h2>
-        <p>
-          Запобігання вигоранню потребує як індивідуальних, так і організаційних
-          заходів. Ось основні стратегії:
-        </p>
+        <h2>Основні причини вигорання в геймдеві</h2>
 
-        <div class="tip">
-          <div class="tip-icon">💡</div>
-          <div class="tip-content">
-            <h3>Встановіть чіткі межі</h3>
-            <p>
-              Навчіться говорити "ні" надмірним робочим вимогам. Встановіть
-              реальні дедлайни і дотримуйтесь нормального робочого графіка.
-            </p>
+        <div class="slider">
+          <div class="slide active">
+            <img
+              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Кранч-тайм"
+            />
+            <div class="slide-caption">
+              Кранч-тайм - одна з головних причин вигорання
+            </div>
+          </div>
+          <div class="slide">
+            <img
+              src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Робочий стрес"
+            />
+            <div class="slide-caption">Високий рівень стресу в індустрії</div>
+          </div>
+          <div class="slide">
+            <img
+              src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Недостатній баланс"
+            />
+            <div class="slide-caption">Порушення work-life балансу</div>
           </div>
         </div>
 
-        <div class="tip">
-          <div class="tip-icon">⏰</div>
-          <div class="tip-content">
-            <h3>Робочий графік</h3>
-            <p>
-              Створіть реалістичний графік роботи з обов'язковими перервами.
-              Використовуйте техніку Pomodoro (25 хв роботи / 5 хв відпочинку).
-            </p>
-          </div>
-        </div>
-
-        <div class="interactive-box">
-          <h3>Ваш щоденний план профілактики</h3>
+        <div class="cause-card">
+          <h3>1. Кранч-культура</h3>
           <p>
-            Відмітьте, що ви вже зробили сьогодні для запобігання вигоранню:
+            Періоди надмірної роботи перед релізами (кранч) стали нормою в
+            індустрії. Це призводить до фізичного та емоційного виснаження.
           </p>
-
-          <ul class="checklist">
-            <li>
-              <input type="checkbox" id="item1" class="prevention-checkbox" />
-              <label for="item1">Зробив перерву після 1 години роботи</label>
-            </li>
-            <li>
-              <input type="checkbox" id="item2" class="prevention-checkbox" />
-              <label for="item2">Випив достатньо води</label>
-            </li>
-            <li>
-              <input type="checkbox" id="item3" class="prevention-checkbox" />
-              <label for="item3">Вийшов на прогулянку</label>
-            </li>
-            <li>
-              <input type="checkbox" id="item4" class="prevention-checkbox" />
-              <label for="item4">Не працював понад 8 годин</label>
-            </li>
-            <li>
-              <input type="checkbox" id="item5" class="prevention-checkbox" />
-              <label for="item5">Займався хобі</label>
-            </li>
-          </ul>
-
-          <div class="progress-container">
-            <div class="progress-bar" id="prevention-progress"></div>
-          </div>
-          <p id="progress-text">0% завершено</p>
-        </div>
-
-        <h3>Техніки релаксації</h3>
-        <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin: 1rem 0">
           <div
             style="
-              flex: 1;
-              min-width: 200px;
-              background: white;
+              background-color: #f8f9fa;
               padding: 1rem;
-              border-radius: 8px;
-              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+              border-radius: 4px;
+              margin-top: 1rem;
             "
           >
-            <h4>Глибоке дихання</h4>
-            <p>4-7-8 техніка: вдих на 4, затримка на 7, видих на 8 секунд.</p>
-            <button
-              class="start-breathing"
-              style="
-                padding: 0.5rem 1rem;
-                background-color: #6e48aa;
-                color: white;
-                border: none;
-                border-radius: 4px;
-                cursor: pointer;
-              "
-            >
-              Старт
-            </button>
-            <div
-              id="breathing-timer"
-              style="font-size: 2rem; text-align: center; margin-top: 1rem"
-            ></div>
-          </div>
-
-          <div
-            style="
-              flex: 1;
-              min-width: 200px;
-              background: white;
-              padding: 1rem;
-              border-radius: 8px;
-              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            "
-          >
-            <h4>5-4-3-2-1</h4>
             <p>
-              Назвіть 5 речей, які бачите, 4 - які чуєте, 3 - які відчуваєте, 2
-              - які пахнуть, 1 - які можете скуштувати.
+              <strong>Цитата розробника:</strong> "Ми працювали по 80 годин на
+              тиждень протягом 3 місяців перед релізом. Після цього половина
+              команди звільнилася."
             </p>
           </div>
+        </div>
+
+        <div class="cause-card">
+          <h3>2. Невизначеність та зміни</h3>
+          <p>
+            Часті зміни в дизайні, механіках ігрового процесу або технологіях
+            створюють постійний стрес і відчуття марнотратства часу.
+          </p>
+        </div>
+
+        <div class="cause-card">
+          <h3>3. Висока конкуренція</h3>
+          <p>
+            Жорстка конкуренція між студіями та інди-розробниками створює
+            додатковий тиск і страх невдачі.
+          </p>
+        </div>
+
+        <div class="cause-card">
+          <h3>4. Емоційна прив'язаність</h3>
+          <p>
+            Розробники часто надто емоційно вкладаються у свої проекти, що
+            робить їх більш вразливими до розчарувань.
+          </p>
+        </div>
+
+        <div class="cause-card">
+          <h3>5. Недостатній work-life баланс</h3>
+          <p>
+            Тривалі робочі години за межами офісу, відсутність якісного
+            відпочинку призводять до накопичення втоми.
+          </p>
         </div>
       </section>
 
       <section>
-        <h2>Відео-медитація для розробників</h2>
-        <div
+        <h2>Графік причин вигорання</h2>
+        <canvas
+          id="causesChart"
+          width="400"
+          height="200"
           style="
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            margin: 1rem 0;
+            width: 100%;
+            max-width: 800px;
+            margin: 1rem auto;
+            display: block;
           "
-        >
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/inpok4MKVLM"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            style="
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-            "
-          ></iframe>
-        </div>
+        ></canvas>
       </section>
     </main>
 
     <footer>
-      <p>&copy; 2023 Профілактика вигорання в геймдеві. Всі права захищені.</p>
+      <p>&copy; 2025 Профілактика вигорання в геймдеві.</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
-      // Інтерактивний чекліст
-      const checkboxes = document.querySelectorAll(".prevention-checkbox");
-      const progressBar = document.getElementById("prevention-progress");
-      const progressText = document.getElementById("progress-text");
+      let currentSlide = 0;
+      const slides = document.querySelectorAll(".slide");
 
-      checkboxes.forEach((checkbox) => {
-        checkbox.addEventListener("change", updateProgress);
-      });
-
-      function updateProgress() {
-        const checked = document.querySelectorAll(
-          ".prevention-checkbox:checked"
-        ).length;
-        const total = checkboxes.length;
-        const percentage = (checked / total) * 100;
-
-        progressBar.style.width = percentage + "%";
-        progressText.textContent = Math.round(percentage) + "% завершено";
-
-        if (percentage === 100) {
-          progressText.innerHTML +=
-            "<br>Відмінно! Ви добре піклуєтесь про себе!";
-        }
+      function showSlide(n) {
+        slides.forEach((slide) => slide.classList.remove("active"));
+        currentSlide = (n + slides.length) % slides.length;
+        slides[currentSlide].classList.add("active");
       }
 
-      // Таймер дихання
-      document
-        .querySelector(".start-breathing")
-        .addEventListener("click", function () {
-          const timer = document.getElementById("breathing-timer");
-          let seconds = 0;
-          let phase = "inhale"; // inhale, hold, exhale
+      function nextSlide() {
+        showSlide(currentSlide + 1);
+      }
 
-          timer.textContent = "Вдих - 4 сек";
+      setInterval(nextSlide, 5000);
 
-          const interval = setInterval(() => {
-            seconds++;
-
-            if (phase === "inhale" && seconds >= 4) {
-              phase = "hold";
-              seconds = 0;
-              timer.textContent = "Затримка - 7 сек";
-            } else if (phase === "hold" && seconds >= 7) {
-              phase = "exhale";
-              seconds = 0;
-              timer.textContent = "Видих - 8 сек";
-            } else if (phase === "exhale" && seconds >= 8) {
-              phase = "inhale";
-              seconds = 0;
-              timer.textContent = "Вдих - 4 сек";
-            }
-
-            if (seconds >= 30) {
-              // Зупинити після 30 сек
-              clearInterval(interval);
-              timer.textContent = "Готово!";
-            }
-          }, 1000);
+      document.addEventListener("DOMContentLoaded", function () {
+        const ctx = document.getElementById("causesChart").getContext("2d");
+        const chart = new Chart(ctx, {
+          type: "bar",
+          data: {
+            labels: [
+              "Кранч-культура",
+              "Невизначеність",
+              "Конкуренція",
+              "Емоційність",
+              "Баланс",
+            ],
+            datasets: [
+              {
+                label: "Частота згадування (%)",
+                data: [78, 65, 52, 48, 72],
+                backgroundColor: [
+                  "rgba(110, 72, 170, 0.7)",
+                  "rgba(157, 80, 187, 0.7)",
+                  "rgba(203, 108, 230, 0.7)",
+                  "rgba(225, 190, 231, 0.7)",
+                  "rgba(245, 222, 179, 0.7)",
+                ],
+                borderColor: [
+                  "rgba(110, 72, 170, 1)",
+                  "rgba(157, 80, 187, 1)",
+                  "rgba(203, 108, 230, 1)",
+                  "rgba(225, 190, 231, 1)",
+                  "rgba(245, 222, 179, 1)",
+                ],
+                borderWidth: 1,
+              },
+            ],
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true,
+                max: 100,
+              },
+            },
+            animation: {
+              duration: 2000,
+            },
+          },
         });
+      });
     </script>
   </body>
 </html>
