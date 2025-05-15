@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Вигорання в геймдеві - Головна</title>
+    <style>
+      /* Глобальні стилі */
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+        color: #333;
+      }
+
+      header {
+        background: linear-gradient(135deg, #6e48aa 0%, #9d50bb 100%);
+        color: white;
+        padding: 1rem 0;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      nav {
+        background-color: #333;
+        padding: 0.5rem;
+      }
+
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      nav li {
+        margin: 0 1rem;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+      }
+
+      nav a:hover {
+        background-color: #555;
+      }
+
+      main {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 1rem 0;
+        margin-top: 2rem;
+      }
+
+      /* Анімації */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .animated {
+        animation: fadeIn 1s ease-in;
+      }
+
+      .pulse {
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      /* Специфічні стилі */
+      .warning-box {
+        background-color: #fff3cd;
+        border-left: 5px solid #ffc107;
+        padding: 1rem;
+        margin: 1rem 0;
+      }
+
+      .statistics-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+      }
+
+      .statistics-table th,
+      .statistics-table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+
+      .statistics-table tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+
+      .statistics-table th {
+        background-color: #6e48aa;
+        color: white;
+      }
+
+      .game-card {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+        margin: 1rem 0;
+        transition: transform 0.3s;
+      }
+
+      .game-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .image-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin: 1rem 0;
+      }
+
+      .image-gallery img {
+        width: 200px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 4px;
+        transition: transform 0.3s;
+      }
+
+      .image-gallery img:hover {
+        transform: scale(1.1);
+      }
+
+      /* Кнопка наверх */
+      #back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #6e48aa;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        cursor: pointer;
+        display: none;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      #back-to-top:hover {
+        background-color: #9d50bb;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Головна сторінка -->
+    <header class="animated">
+      <h1>Вигорання в розробці ігор</h1>
+      <p>
+        Розуміння, профілактика та подолання професійного вигорання в геймдеві
+      </p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="symptoms.html">Симптоми</a></li>
+        <li><a href="causes.html">Причини</a></li>
+        <li><a href="prevention.html">Профілактика</a></li>
+        <li><a href="resources.html">Ресурси</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section>
+        <h2>Що таке вигорання в геймдеві?</h2>
+        <p>
+          Вигорання в розробці ігор - це стан фізичного, емоційного та
+          ментального виснаження, викликаний тривалим стресовим робочим
+          середовищем у сфері розробки відеоігор.
+        </p>
+
+        <div class="warning-box pulse">
+          <p>
+            За даними досліджень,
+            <strong>понад 75% розробників ігор</strong> стикаються з симптомами
+            вигорання на різних етапах своєї кар'єри.
+          </p>
+        </div>
+
+        <img
+          src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+          alt="Розробка ігор"
+          style="
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 1rem 0;
+          "
+        />
+
+        <h3>Чому геймдев особливо вразливий?</h3>
+        <p>
+          Індустрія розробки ігор має кілька унікальних факторів, які сприяють
+          вигоранню:
+        </p>
+        <ul>
+          <li>
+            Жорсткі дедлайни та "кранч" (періоди надмірної роботи перед релізом)
+          </li>
+          <li>Висока конкуренція та швидкі зміни технологій</li>
+          <li>Емоційна прив'язаність до проектів</li>
+          <li>Часті зміни в дизайні та механіках під час розробки</li>
+        </ul>
+
+        <div class="image-gallery">
+          <img
+            src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+            alt="Розробник за роботою"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+            alt="Команда розробників"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+            alt="Кодінг"
+          />
+        </div>
+      </section>
+
+      <section>
+        <h2>Статистика вигорання в геймдеві</h2>
+        <table class="statistics-table">
+          <tr>
+            <th>Показник</th>
+            <th>Відсоток</th>
+            <th>Примітки</th>
+          </tr>
+          <tr>
+            <td>Розробники, які відчували вигорання</td>
+            <td>75%</td>
+            <td>Дослідження IGDA 2019</td>
+          </tr>
+          <tr>
+            <td>Розробники, які працювали понад 50 год/тиждень</td>
+            <td>62%</td>
+            <td>Дослідження IGDA 2019</td>
+          </tr>
+          <tr>
+            <td>Розробники, які вважають кранч неминучим</td>
+            <td>54%</td>
+            <td>Дослідження IGDA 2019</td>
+          </tr>
+          <tr>
+            <td>Розробники, які розглядали можливість зміни професії</td>
+            <td>48%</td>
+            <td>Дослідження Game Developer 2020</td>
+          </tr>
+        </table>
+      </section>
+
+      <section>
+        <h2>Відео про вигорання в геймдеві</h2>
+        <div
+          style="
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin: 1rem 0;
+          "
+        >
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            style="
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+            "
+          ></iframe>
+        </div>
+        <p>
+          Це відео розповідає про реальні історії розробників, які стикалися з
+          вигоранням, та їхні шляхи подолання цієї проблеми.
+        </p>
+      </section>
+
+      <section>
+        <h2>Аудіо: Медитація для розробників</h2>
+        <audio controls style="width: 100%; margin: 1rem 0">
+          <source
+            src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+            type="audio/mpeg"
+          />
+          Ваш браузер не підтримує аудіо елемент.
+        </audio>
+        <p>
+          Коротка медитація, яка допоможе зняти стрес після тривалого кодингу.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 Профілактика вигорання в геймдеві. Всі права захищені.</p>
+      <p>
+        Зв'язатися з нами:
+        <a href="geasy7759@gmail.com" style="color: #9d50bb"
+          >geasy7759@gmail.com</a
+        >
+      </p>
+      <div>
+        <a href="https://facebook.com" style="color: white; margin: 0 0.5rem"
+          >Facebook</a
+        >
+        <a href="https://twitter.com" style="color: white; margin: 0 0.5rem"
+          >Twitter</a
+        >
+        <a href="https://linkedin.com" style="color: white; margin: 0 0.5rem"
+          >LinkedIn</a
+        >
+      </div>
+    </footer>
+
+    <button id="back-to-top" title="Наверх">↑</button>
+
+    <script>
+      // Кнопка "Наверх"
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          document.getElementById("back-to-top").style.display = "block";
+        } else {
+          document.getElementById("back-to-top").style.display = "none";
+        }
+      }
+
+      document
+        .getElementById("back-to-top")
+        .addEventListener("click", function () {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        });
+
+      // Анімація при завантаженні
+      document.addEventListener("DOMContentLoaded", function () {
+        const elements = document.querySelectorAll(".game-card, h2, h3");
+        elements.forEach((el, index) => {
+          setTimeout(() => {
+            el.classList.add("animated");
+          }, index * 200);
+        });
+      });
+
+      // Інтерактивна карта зображень
+      document.querySelectorAll(".image-gallery img").forEach((img) => {
+        img.addEventListener("click", function () {
+          alert("Ви обрали зображення: " + this.alt);
+        });
+      });
+    </script>
+  </body>
+  <html lang="uk">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Симптоми вигорання - Вигорання в геймдеві</title>
+      <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+      <header>
+        <h1>Симптоми вигорання в розробці ігор</h1>
+      </header>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="symptoms.html">Симптоми</a></li>
+          <li><a href="causes.html">Причини</a></li>
+          <li><a href="prevention.html">Профілактика</a></li>
+          <li><a href="resources.html">Ресурси</a></li>
+        </ul>
+      </nav>
+
+      <main>
+        <section>
+          <h2>Основні симптоми вигорання</h2>
+          <img
+            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+            alt="Стрес"
+            style="
+              width: 100%;
+              max-height: 400px;
+              object-fit: cover;
+              border-radius: 8px;
+              margin: 1rem 0;
+            "
+          />
+
+          <div class="warning-box">
+            <p>
+              Вигорання не відбувається за одну ніч. Це поступовий процес, який
+              має чіткі ознаки.
+            </p>
+          </div>
+
+          <h3>Фізичні симптоми</h3>
+          <ul>
+            <li>Хронічна втома</li>
+            <li>Порушення сну</li>
+            <li>Часті головні болі</li>
+            <li>Зміни апетиту</li>
+            <li>Зниження імунітету</li>
+          </ul>
+
+          <h3>Емоційні симптоми</h3>
+          <ul>
+            <li>Відчуття безпорадності</li>
+            <li>Втрата мотивації</li>
+            <li>Цинічне ставлення до роботи</li>
+            <li>Дратівливість</li>
+            <li>Відчуття самотності</li>
+          </ul>
+
+          <h3>Професійні симптоми</h3>
+          <ul>
+            <li>Зниження продуктивності</li>
+            <li>Втрата креативності</li>
+            <li>Небажання вдосконалювати навички</li>
+            <li>Часті помилки в коді</li>
+            <li>Уникнення робочих обов'язків</li>
+          </ul>
+
+          <map name="symptomsmap">
+            <area
+              shape="rect"
+              coords="0,0,300,200"
+              alt="Фізичні симптоми"
+              href="#physical"
+              title="Фізичні симптоми"
+            />
+            <area
+              shape="rect"
+              coords="300,0,600,200"
+              alt="Емоційні симптоми"
+              href="#emotional"
+              title="Емоційні симптоми"
+            />
+            <area
+              shape="rect"
+              coords="0,200,300,400"
+              alt="Професійні симптоми"
+              href="#professional"
+              title="Професійні симптоми"
+            />
+            <area
+              shape="rect"
+              coords="300,200,600,400"
+              alt="Стадії вигорання"
+              href="#stages"
+              title="Стадії вигорання"
+            />
+          </map>
+        </section>
+      </main>
+
+      <footer>
+        <p>
+          &copy; 2025 Профілактика вигорання в геймдеві.
+        </p>
+      </footer>
+      </script>
+    </body>
+  </html>
+</html>
